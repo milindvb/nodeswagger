@@ -20,7 +20,7 @@ const port = process.env.PORT || 3000;
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen(port);
+    await fastify.listen(port, '::');
     fastify.swagger();
     fastify.log.info(`Server listening on ${port}`);
   } catch (err) {
